@@ -1,16 +1,31 @@
-const text = "What's your name, my love?";
-let i = 0;
-const typingSpeed = 60;
-const typingTarget = document.getElementById("typing-text");
+const slides = document.querySelectorAll(".slide");
+const startBtn = document.getElementById("startBtn");
+const nameInput = document.getElementById("nameInput");
+const greeting = document.getElementById("greeting");
+const nextBtns = document.querySelectorAll(".nextBtn");
 
-function typeWriter() {
-  if (i < text.length) {
-    typingTarget.innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typeWriter, typingSpeed);
-  }
+let currentSlide = 0;
+let userName = "";
+
+function showSlide(n) {
+  slides.forEach((slide, i) => {
+    slide.classList.add("hidden");
+    if (i === n) slide.classList.remove("hidden");
+  });
 }
 
-window.onload = () => {
-  typeWriter();
-};
+startBtn.addEventListener("click", () => {
+  userName = nameInput.value.trim() || "Motuu";
+  greeting.textContent = `Namaste ${userName}, kaise ho? Chalo thoda mazaak karte hain 😂`;
+  currentSlide++;
+  showSlide(currentSlide);
+});
+
+nextBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    currentSlide++;
+    showSlide(currentSlide);
+  });
+});
+
+showSlide(currentSlide);
