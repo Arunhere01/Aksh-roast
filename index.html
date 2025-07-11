@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aksh Roast Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="screen">
+    <!-- Slide 1: Welcome -->
+    <div class="slide" id="slide1">
+      <img src="cartoon.png" class="avatar" alt="Aksh Cartoon" />
+      <h1 class="headline">APNA NAAM FILL KR MOTUU</h1>
+      <input type="text" id="nameInput" placeholder="Type your name..." />
+      <button id="startBtn">ENTER</button>
+    </div>
+
+    <!-- Slide 2: Greeting -->
+    <div class="slide hidden" id="slide2">
+      <p class="line" id="greeting"></p>
+      <button class="nextBtn">CHALO SHURU KAREN</button>
+    </div>
+
+    <!-- Slide 3: 1.jpg -->
+    <div class="slide bg" id="slide3" style="background-image: url('1.jpg')">
+      <div class="dialogue">
+        <p>Scooter pe nahi, tu NASA mission pe lag raha hai 😎</p>
+        <p>Yeh pose toh full confidence ka dahi bhalla hai 🛵</p>
+        <p>Helmet pehenta nahi, planet pe jaata hai!</p>
+        <button class="nextBtn">AGLA ATTACK</button>
+      </div>
+    </div>
+
+    <!-- Slide 4: 2.jpg -->
+    <div class="slide bg" id="slide4" style="background-image: url('2.jpg')">
+      <div class="dialogue">
+        <p>Cake dikh raha hai, tu showroom lag raha hai 🎂</p>
+        <p>Family photo mein bhi MOTAA MODE on 😂</p>
+        <p>Spoon toh rakhi hai, decoration ke liye kya?</p>
+        <button class="nextBtn">PHIRSE MAAR</button>
+      </div>
+    </div>
+
+    <!-- Slide 5: 3.jpg -->
+    <div class="slide bg" id="slide5" style="background-image: url('3.jpg')">
+      <div class="dialogue">
+        <p>Is look mein tu cake se zyada creamy lag raha 🤤</p>
+        <p>Bakingo ka brand ambassador bana den kya?</p>
+        <p>Cake: Help me! Aksh: No mercy 😈</p>
+        <button class="nextBtn">EMOTIONAL HO RHA HU</button>
+      </div>
+    </div>
+
+    <!-- Slide 6: 4.jpg -->
+    <div class="slide bg" id="slide6" style="background-image: url('4.jpg')">
+      <div class="dialogue">
+        <p>Yeh woh samay tha jab motu sirf chubby hota tha 🍭</p>
+        <p>Newspaper padhta nahi tha, menu samajh ke rakhta tha 😹</p>
+        <p>Investor meeting ki tyaari lag rahi hai 📈</p>
+        <button class="nextBtn">BAS KAR BHAI</button>
+      </div>
+    </div>
+
+    <!-- Final Slide -->
+    <div class="slide final hidden" id="slide7">
+      <p>Tere jaise bhai har kisi ko nahi milte...</p>
+      <p>Thoda funny, thoda foodie, full legend ❤️</p>
+      <button onclick="location.reload()">RESTART KAR MOTUU 😂</button>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
